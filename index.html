@@ -1,30 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Farheen Portfolio</title>
+  <title>Farheen Jahanzeb - Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body {margin:0;font-family:Arial;background:#0b1220;color:white;text-align:center;}
-    .card{background:#1f2937;margin:15px auto;padding:20px;width:80%;border-radius:12px;cursor:pointer;transition:0.3s;}
-    .card:hover{transform:scale(1.05);background:#374151;}
-    header{padding:40px;background:#111827;}
-    a{color:white;text-decoration:none;}
+    body{
+      margin:0;
+      font-family:Arial;
+      background:#0b1220;
+      color:white;
+    }
+
+    nav{
+      background:#111827;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      margin:10px;
+      text-decoration:none;
+    }
+
+    section{
+      padding:40px;
+      text-align:center;
+    }
+
+    .card{
+      background:#1f2937;
+      margin:15px auto;
+      padding:20px;
+      width:80%;
+      border-radius:12px;
+    }
+
+    .skill{
+      display:inline-block;
+      background:#374151;
+      padding:8px 15px;
+      margin:5px;
+      border-radius:20px;
+    }
+
+    .btn{
+      padding:10px 20px;
+      background:#3b82f6;
+      border:none;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
+<!-- NAV -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="game.html">Game</a>
+  <a href="todo.html">To-Do</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section>
   <h1>👩‍💻 Farheen Jahanzeb</h1>
-  <p>Software Engineer</p>
-</header>
+  <p>Software Engineer | Web Developer | Game Developer</p>
+</section>
 
-<div class="card" onclick="location.href='game.html'">
-  🎮 Catch Game (Play Now)
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    I am a Software Engineer passionate about web development, game development and digital tools.
+  </div>
+</section>
 
-<div class="card" onclick="location.href='todo.html'">
-  📝 To-Do App
-</div>
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Shopify</div>
+    <div class="skill">Meta Ads</div>
+    <div class="skill">Canva</div>
+    <div class="skill">Game Dev</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">Python</div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="card">
+    📧 Email: <b>engr.farheen2026@gmail.com</b><br><br>
+    <button class="btn" onclick="alert('Message Sent (demo)')">Send Message</button>
+  </div>
+
+</section>
 
 </body>
 </html>
