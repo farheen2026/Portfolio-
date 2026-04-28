@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catch Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{text-align:center;font-family:Arial;background:#0f172a;color:white;}
+    #box{width:50px;height:50px;background:red;position:absolute;display:none;}
+    #area{width:90vw;height:60vh;background:#1e293b;margin:20px auto;position:relative;}
+    button{padding:10px 20px;}
+  </style>
+</head>
+<body>
+
+<h1>🎮 Catch Game</h1>
+<p>Score: <span id="score">0</span></p>
+<button onclick="start()">Start</button>
+
+<div id="area">
+  <div id="box"></div>
+</div>
+
+<script>
+let score=0;
+let box=document.getElementById("box");
+let area=document.getElementById("area");
+
+function move(){
+  let x=Math.random()*(area.clientWidth-50);
+  let y=Math.random()*(area.clientHeight-50);
+  box.style.left=x+"px";
+  box.style.top=y+"px";
+}
+
+function start(){
+  score=0;
+  box.style.display="block";
+  setInterval(move,800);
+}
+
+box.onclick=function(){
+  score++;
+  document.getElementById("score").innerText=score;
+  move();
+}
+</script>
+
+</body>
+</html>
